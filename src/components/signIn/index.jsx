@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import FormField from "../UI/formField";
+import "./signin.css";
 import { validate } from "../UI/misc";
 import { firebase } from "../../firebase";
-// import {firebase} from '../../firebase';
 
 class SignIn extends Component {
   state = {
@@ -67,14 +67,6 @@ class SignIn extends Component {
       formError: false,
       formSuccess: "Congratulations"
     });
-
-    this.resetSuccess();
-  }
-
-  resetSuccess() {
-    setTimeout(() => {
-      this.setState({ formSuccess: "" });
-    }, 2000);
   }
 
   submitForm = event => {
@@ -92,7 +84,7 @@ class SignIn extends Component {
         .auth()
         .signInWithEmailAndPassword(dataToSubmit.email, dataToSubmit.password)
         .then(() => {
-          this.props.history.push('/dashboard')
+          this.props.history.push("/dashboard");
         })
         .catch(error => {
           this.setState({
@@ -108,8 +100,11 @@ class SignIn extends Component {
     return (
       <div className="container">
         <div className="signin_wrapper">
-          <form onSubmit={event => this.submitForm(event)}>
-            <h2>Войдите в систему</h2>
+          <form
+            onSubmit={event => this.submitForm(event)}
+            className="registration_form"
+          >
+            <h2>Вход в систему</h2>
             <div>
               <FormField
                 id={"email"}

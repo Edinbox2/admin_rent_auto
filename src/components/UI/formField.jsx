@@ -1,6 +1,6 @@
 import React from "react";
 
-const FormField = ({ formdata, id, change }) => {
+const FormField = ({ formdata, id, change, add }) => {
 
   const showError =()=>{
     let errorMessage = <div className="error_label">
@@ -23,6 +23,7 @@ const FormField = ({ formdata, id, change }) => {
             {...formdata.config}
             value={formdata.value}
             onChange={event => change({ event, id })}
+            className="registration_field"
           />
           {showError()}
           </div>
