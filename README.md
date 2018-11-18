@@ -1,3 +1,11 @@
+КАК ЗАПУСТИТЬ ДАННЫЙ КОД
+
+для запускаполучения node modules в терминале запустить npm install
+для старта на локалке в терминале прописать npm start
+для компиляции кода в продакшн в терминале прописать npm run build
+ИСПОЛЬЗУЕМАЯ БАЗА ДАННЫХ FIREBASE
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
