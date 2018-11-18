@@ -54,20 +54,20 @@ class SignIn extends Component {
     this.setState({ formdata: formdata, formError: false });
   };
 
-  resetForm() {
-    const formData = { ...this.state.formdata };
-    for (let key in formData) {
-      formData[key].value = "";
-      formData[key].valid = false;
-      formData[key].validationMessage = "";
-    }
+  // resetForm() {
+  //   const formData = { ...this.state.formdata };
+  //   for (let key in formData) {
+  //     formData[key].value = "";
+  //     formData[key].valid = false;
+  //     formData[key].validationMessage = "";
+  //   }
 
-    this.setState({
-      formdata: formData,
-      formError: false,
-      formSuccess: "Congratulations"
-    });
-  }
+  //   this.setState({
+  //     formdata: formData,
+  //     formError: false,
+  //     formSuccess: "Congratulations"
+  //   });
+  // }
 
   submitForm = event => {
     event.preventDefault();

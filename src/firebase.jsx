@@ -18,4 +18,5 @@ const firebaseDB = firebase.database();
 
 export {
     firebase, 
+    firebaseDB
 }
